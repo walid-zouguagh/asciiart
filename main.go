@@ -27,8 +27,4 @@ func main() {
 	/******* Output *******/
 	/**********************/
 	functions.Output(verifiedInput, contentFileStandard)
-
-	// input := "hello \n\n world \n hi man"
-	// slInput := strings.Split(input, "\n")
-	// fmt.Println(slInput)
 }

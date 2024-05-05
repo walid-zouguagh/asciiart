@@ -14,10 +14,10 @@ func VerifiedInput(arguments []string) []string {
 			log.Fatalln("Please Enter Correctly Characters")
 		}
 	}
-	// slInput := strings.Split(input, "\n")
 
 	// str := "hello \n\n world \n hi man"
 	slInput := []string{}
+	// slInput = strings.Split(input, "\\n")
 	start := 0
 	for i := 0; i < len(input); i++ {
 		if input[i] == '\\' && input[i+1] == 'n' {
@@ -31,6 +31,7 @@ func VerifiedInput(arguments []string) []string {
 	if input[start:] != "" {
 		slInput = append(slInput, input[start:])
 	}
-	// slInput := strings.Split(str, "\n")
 	return slInput
 }
+
+
