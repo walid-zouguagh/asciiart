@@ -9,18 +9,17 @@ func VerifiedInput(arguments []string) []string {
 	/******* Verified Input the User ********/
 	/****************************************/
 	input := arguments[1]
+	
 	for i := 0; i < len(input); i++ {
-		if input[i] < 32 || input[i] > 126 || input == "" {
-			log.Fatalln("Please Enter Correctly Characters")
+		if input[i] < 32 || input[i] > 126 {
+			log.Fatalln("Please Enter Valid Characters")
 		}
 	}
 
-	// str := "hello \n\n world \n hi man"
 	slInput := []string{}
-	// slInput = strings.Split(input, "\\n")
 	start := 0
 	for i := 0; i < len(input); i++ {
-		if input[i] == '\\' && input[i+1] == 'n' {
+		if i+1 < len(input) && input[i] == '\\' && input[i+1] == 'n' {
 			if input[start:i] != "" {
 				slInput = append(slInput, input[start:i])
 			}
@@ -33,5 +32,3 @@ func VerifiedInput(arguments []string) []string {
 	}
 	return slInput
 }
-
-

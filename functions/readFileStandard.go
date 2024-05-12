@@ -32,7 +32,7 @@ func ReadFileStandard(file string) map[rune][]string {
 		}
 		contentFileStandard[rune(i+32)] = append(contentFileStandard[rune(i+32)], scanner.Text())
 		count++
-		if i == 93 {
+		if i == 95 {
 			break
 		}
 	}

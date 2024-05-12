@@ -33,5 +33,3 @@ func Output(verifiedInput []string, contentFileStandard map[rune][]string) {
 		fmt.Println()
 	}
 }
-
-// hello world
